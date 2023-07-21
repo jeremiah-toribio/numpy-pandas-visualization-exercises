@@ -14,7 +14,10 @@ max_of_a = max(a)
 # Exercise 4 - Make a variable named mean_of_a to hold the average of all the numbers in the above list
 mean_of_a = sum(a) / len(a)
 # Exercise 5 - Make a variable named product_of_a to hold the product of multiplying all the numbers in the above list together
-mean_of_a = a * a
+prod_of_a = 1
+for i in a:
+    prod_of_a *= i
+prod_of_a
 # Exercise 6 - Make a variable named squares_of_a. It should hold each number in a squared like [1, 4, 9, 16, 25...]
 squares_of_a = [i ** 2 for i in a]
 # Exercise 7 - Make a variable named odds_in_a. It should hold only the odd numbers
@@ -90,7 +93,10 @@ c = np.array(c)
 c.min()
 c.max()
 c.sum()
-c * c
+np.prod(c)
+
+x = []
+y
 # Exercise 2 - Determine the standard deviation of c.
 c.std()
 # Exercise 3 - Determine the variance of c.
@@ -103,10 +109,10 @@ print(c.transpose())
 np.dot(c,c)
 # Exercise 7 - Write the code necessary to sum up the result of c times c transposed. Answer should be 261
 product_c = c*c
-product_c.transpose().sum()
+c.sum() + c.transposed()
 # Exercise 8 - Write the code necessary to determine the product of c times c transposed. Answer should be 131681894400.
 tranc = c.transposed()
-tranc * tranc
+c * tranc
 
 ## Setup 4
 d = [
@@ -130,9 +136,10 @@ d % 2 == 0
 np.unique(d)
 # Exercise 7 - Determine how many unique numbers there are in d.
 len(np.unique(d))
+np.unique(d).size
 # Exercise 8 - Print out the shape of d.
 d.shape()
 # Exercise 9 - Transpose and then print out the shape of d.
-d.transpose()
+d.transpose().shape
 # Exercise 10 - Reshape d into an array of 9 x 2
 d.reshape(9,2)
